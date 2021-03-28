@@ -1,0 +1,11 @@
+D:\Interview\Samples\TestApi\Entities\bin\Debug\netcoreapp2.1\Entities.deps.json
+D:\Interview\Samples\TestApi\Entities\bin\Debug\netcoreapp2.1\Entities.dll
+D:\Interview\Samples\TestApi\Entities\bin\Debug\netcoreapp2.1\Entities.pdb
+D:\Interview\Samples\TestApi\Entities\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Interview\Samples\TestApi\Entities\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
+D:\Interview\Samples\TestApi\Entities\obj\Debug\netcoreapp2.1\Entities.csproj.CoreCompileInputs.cache
+D:\Interview\Samples\TestApi\Entities\obj\Debug\netcoreapp2.1\Entities.AssemblyInfoInputs.cache
+D:\Interview\Samples\TestApi\Entities\obj\Debug\netcoreapp2.1\Entities.AssemblyInfo.cs
+D:\Interview\Samples\TestApi\Entities\obj\Debug\netcoreapp2.1\Entities.csproj.CopyComplete
+D:\Interview\Samples\TestApi\Entities\obj\Debug\netcoreapp2.1\Entities.dll
+D:\Interview\Samples\TestApi\Entities\obj\Debug\netcoreapp2.1\Entities.pdb

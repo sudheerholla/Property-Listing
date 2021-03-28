@@ -1,0 +1,26 @@
+<h1>Properties</h1>
+
+
+<p *ngIf="!properties"><em>Loading...</em></p>
+
+<table class='table' *ngIf="properties">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Year Built</th>
+      <th>List Price</th>
+      <th>Monthly Rent</th>
+      <th>Gross Yield</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let property of properties">
+      <td>{{ property.address }}</td>
+      <td>{{ property.yearBuilt }}</td>
+      <td>{{ property.listPrice }} $</td>
+      <td>{{ property.monthlyRent }} $</td>
+      <td>{{ property.grossYield }} %</td>
+      <td><button class="btn btn-primary" type="button" (click)="addProperty(property)">Save</button></td>
+    </tr>
+  </tbody>
+</table>
