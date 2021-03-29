@@ -8,6 +8,7 @@ using Dapper;
 using PropertyListing.Core.DAL;
 using PropertyListing.Core.Models;
 using Newtonsoft.Json;
+using PropertyListing.Core.Helpers;
 
 
 namespace PropertyListing.Core.BLL
@@ -20,12 +21,12 @@ namespace PropertyListing.Core.BLL
     }
     public class PropertyService : IPropertyService
     {
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientWrapper<PropertiesJson> _httpClient;
 
         private readonly IPropertyRepository _productRepository;
 
 
-        public PropertyService(HttpClient httpClient, IPropertyRepository productRepository)
+        public PropertyService(IHttpClientWrapper<PropertiesJson> httpClient, IPropertyRepository productRepository)
         {
             _httpClient = httpClient;
             _productRepository = productRepository;
@@ -33,16 +34,8 @@ namespace PropertyListing.Core.BLL
 
         public async Task<Properties> GetProperties(string url)
         {
-            var httpResponse = await _httpClient.GetAsync(url);
-
-            if (!httpResponse.IsSuccessStatusCode)
-            {
-                throw new Exception("Cannot retrieve Properties");
-            }
-
-            var content = await httpResponse.Content.ReadAsStringAsync();
-            var propertiesJson = JsonConvert.DeserializeObject<PropertiesJson>(content);
-            return await TransformProperty(propertiesJson);
+            var httpResponse = await _httpClient.Get(url);
+            return await TransformProperty(httpResponse);
         }
 
         private async Task<Properties> TransformProperty(PropertiesJson propertiesJson)

@@ -6,6 +6,7 @@ using Xunit;
 using Moq;
 using PropertyListing.Core.BLL;
 using PropertyListing.Core.DAL;
+using PropertyListing.Core.Helpers;
 using PropertyListing.Core.Models;
 
 namespace PropertyListing.Tests
@@ -15,7 +16,7 @@ namespace PropertyListing.Tests
        [Fact]
         public void Should_NotCall_AddProperty_When_Record_Exists()
         {
-            var httpClientMock = new Mock<HttpClient>();
+            var httpClientMock = new Mock<IHttpClientWrapper<PropertiesJson>>();
             var propertyRepoMock = new Mock<IPropertyRepository>();
             propertyRepoMock.Setup(m => m.GetById(
                 It.IsAny<int>()
@@ -38,7 +39,7 @@ namespace PropertyListing.Tests
         [Fact]
         public void Should_Call_AddProperty_When_Record_Does_Not_Exists()
         {
-            var httpClientMock = new Mock<HttpClient>();
+            var httpClientMock = new Mock<IHttpClientWrapper<PropertiesJson>>();
             var propertyRepoMock = new Mock<IPropertyRepository>();
             propertyRepoMock.Setup(m => m.GetById(
                 It.IsAny<int>()

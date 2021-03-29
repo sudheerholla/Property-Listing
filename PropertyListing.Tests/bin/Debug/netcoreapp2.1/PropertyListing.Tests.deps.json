@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "19ebcbe935788e293ccc90267aa83ec526aa9c4c"
+    "signature": "d4176901246bced476f42daeb04575bd8b1b79c5"
   },
   "compilationOptions": {},
   "targets": {
@@ -702,6 +702,22 @@
         }
       },
       "System.Memory/4.5.1": {},
+      "System.Net.Http.Formatting.Extension/5.2.3": {
+        "runtime": {
+          "lib/System.Net.Http.Extensions.dll": {
+            "assemblyVersion": "2.2.29.0",
+            "fileVersion": "2.2.29.0"
+          },
+          "lib/System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "5.2.3.0",
+            "fileVersion": "5.2.30128.0"
+          },
+          "lib/System.Net.Http.Primitives.dll": {
+            "assemblyVersion": "4.2.29.0",
+            "fileVersion": "4.2.29.0"
+          }
+        }
+      },
       "System.ObjectModel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1061,6 +1077,7 @@
           "Dapper": "2.0.78",
           "Microsoft.Extensions.Configuration": "2.1.1",
           "Newtonsoft.Json": "13.0.1",
+          "System.Net.Http.Formatting.Extension": "5.2.3",
           "System.Data.SqlClient": "4.4.0.0"
         },
         "runtime": {
@@ -1362,6 +1379,13 @@
       "sha512": "sha512-oonnLQPZAGD21qtNMG4EtVmbYOInk2jV7M+g108B6OHOb67ZOaWnA/K8P5oQ6uK9wxKzB1iEXSChQOi2scKOqA==",
       "path": "system.memory/4.5.1",
       "hashPath": "system.memory.4.5.1.nupkg.sha512"
+    },
+    "System.Net.Http.Formatting.Extension/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d8ITU2wi/Oilg4Xxf5ehaATJKAa95fWwrtnWLk+Sy78L1KMyB4RUKVint0WfOaplAT/+kVGEmW9EMzFsTrneAw==",
+      "path": "system.net.http.formatting.extension/5.2.3",
+      "hashPath": "system.net.http.formatting.extension.5.2.3.nupkg.sha512"
     },
     "System.ObjectModel/4.3.0": {
       "type": "package",

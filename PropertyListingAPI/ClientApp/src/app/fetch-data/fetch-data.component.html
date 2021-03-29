@@ -17,9 +17,9 @@
     <tr *ngFor="let property of properties">
       <td>{{ property.address }}</td>
       <td>{{ property.yearBuilt }}</td>
-      <td>{{ property.listPrice }} $</td>
-      <td>{{ property.monthlyRent }} $</td>
-      <td>{{ property.grossYield }} %</td>
+      <td>{{ property.listPrice.toFixed(2) }} $</td>
+      <td>{{ property.monthlyRent.toFixed(2) }} $</td>
+      <td>{{ property.grossYield.toFixed(2) }} %</td>
       <td><button class="btn btn-primary" type="button" (click)="addProperty(property)">Save</button></td>
     </tr>
   </tbody>

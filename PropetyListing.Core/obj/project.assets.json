@@ -275,6 +275,19 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Net.Http.Formatting.Extension/5.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/System.Net.Http.Extensions.dll": {},
+          "lib/System.Net.Http.Formatting.dll": {},
+          "lib/System.Net.Http.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/System.Net.Http.Extensions.dll": {},
+          "lib/System.Net.Http.Formatting.dll": {},
+          "lib/System.Net.Http.Primitives.dll": {}
+        }
+      },
       "System.Reflection.Emit.Lightweight/4.7.0": {
         "type": "package",
         "compile": {
@@ -861,6 +874,19 @@
         "version.txt"
       ]
     },
+    "System.Net.Http.Formatting.Extension/5.2.3": {
+      "sha512": "d8ITU2wi/Oilg4Xxf5ehaATJKAa95fWwrtnWLk+Sy78L1KMyB4RUKVint0WfOaplAT/+kVGEmW9EMzFsTrneAw==",
+      "type": "package",
+      "path": "system.net.http.formatting.extension/5.2.3",
+      "files": [
+        ".signature.p7s",
+        "lib/System.Net.Http.Extensions.dll",
+        "lib/System.Net.Http.Formatting.dll",
+        "lib/System.Net.Http.Primitives.dll",
+        "system.net.http.formatting.extension.5.2.3.nupkg.sha512",
+        "system.net.http.formatting.extension.nuspec"
+      ]
+    },
     "System.Reflection.Emit.Lightweight/4.7.0": {
       "sha512": "Blr1A9Vqk+ZUknlk6sFrhOcpuqx4bp7kqwZfhwkmmhz+9dgOl8cZ9CnSXbalbL9rfHmi5HDFydxQsfozl2PvjQ==",
       "type": "package",
@@ -948,7 +974,8 @@
       "Dapper >= 2.0.78",
       "Microsoft.Extensions.Configuration >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Newtonsoft.Json >= 13.0.1"
+      "Newtonsoft.Json >= 13.0.1",
+      "System.Net.Http.Formatting.Extension >= 5.2.3"
     ]
   },
   "packageFolders": {
@@ -1009,6 +1036,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "System.Net.Http.Formatting.Extension": {
+            "target": "Package",
+            "version": "[5.2.3, )"
           }
         },
         "imports": [
@@ -1018,5 +1049,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Net.Http.Formatting.Extension 5.2.3' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Net.Http.Formatting.Extension",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

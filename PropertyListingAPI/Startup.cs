@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PropertyListing.Core.Helpers;
 
 namespace PropertyListingAPI
 {
@@ -25,9 +26,12 @@ namespace PropertyListingAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.Configure<AppSettings>(Configuration.GetSection("ApplicationSettings"));
+            services.AddTransient(typeof(IHttpClientWrapper<>), typeof(HTTPClientWrapper<>));
             services.AddScoped<IPropertyService, PropertyService>();
-            services.AddHttpClient<IPropertyService, PropertyService>()
-                .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+            //services.AddHttpClient<IPropertyService, PropertyService>()
+            //    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+           
+              
             services.AddSingleton<IPropertyRepository, PropertyRepository>();
             services.AddSingleton<ICommandText, CommandText>();
             services.AddOptions();
