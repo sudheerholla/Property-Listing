@@ -1,5 +1,5 @@
 # Property-Listing
-Displays a list of Properties
+Sample Application to display a list of properties using .Net Core and Angular
 
 1. Clone Repository to local folder
 2. Run "npm install" through command line in "PropertyListingAPI/ClientApp" folder to install node modules
